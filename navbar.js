@@ -6,3 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.insertAdjacentHTML('afterbegin', html);
         });
 });
+
+
+    function toggleMenu() {
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('show');
+    }
+

@@ -1,91 +1,115 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
 
-        nav {
-            background-color:green;
-            overflow: hidden;
-        }
+    nav {
+        background-color: white;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        justify-content: space-between; /* Align items horizontally with space in between */
+        padding: 15px 20px; /* Add padding for better spacing */
+        
+    }
 
-        nav img {
-            height: 60px;
-            margin-top: 2px;
-            margin-left: 5px;
-        }
+    nav img {
+        height: 60px;
+        margin-top: 2px;
+        margin-left: 45px;
+        margin-right: 50px;
+    }
 
+    nav a {
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        padding: 15px 10px;
+        margin: 0 5px;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    nav a:hover {
+        background-color: #dddddda9;
+        color: black;
+    }
+
+    .menu-icon {
+        display: none;
+        color: black;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .login-register {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: auto; /* Shifts the button to the right corner */
+    }
+
+    @media only screen and (max-width: 768px) {
         nav a {
-            float: right;
             display: block;
-            color: white;
+            width: 100%;
             text-align: center;
-            padding: 22px 16px;
-            text-decoration: none;
-        }
-        nav a {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-            padding: 15px 20px;
-            margin: 0 10px;
+            margin: 0;
         }
 
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
         .menu-icon {
+            display: inline-block;
+        }
+
+        nav ul {
             display: none;
-            color: white;
-            font-size: 1.5em;
-            cursor: pointer;
+            position: absolute;
+            width: 100%;
+            background-color: #444;
+            text-align: center;
+            margin-top: 60px;
         }
 
-        @media only screen and (max-width: 768px) {
-            nav a {
-                display: block;
-                width: 100%;
-                text-align: center;
-                margin: 0;
-            }
-
-            .menu-icon {
-                display: inline-block;
-            }
-
-            nav ul {
-                display: none;
-                position: absolute;
-                width: 100%;
-                background-color: #444;
-                text-align: center;
-                margin-top: 60px;
-            }
-
-            nav ul.show {
-                display: block;
-            }
-
-            nav ul li {
-                display: block;
-                padding: 15px 0;
-            }
+        nav ul.show {
+            display: block;
         }
-    </style>
-</head>
 
-<body>
+        nav ul li {
+            display: block;
+            padding: 15px 0;
+        }
+
+        .login-register {
+            margin: 15px 0;
+        }
+    }
+</style>
+
+
+
+
+
 
 <nav>
-    <img src="logo.jpeg" alt="Logo">
-    <a href="contactus.html">24/7 Helpline</a>
-    <a href="umrah.html">Umrah</a>
-    <a href="hajj.html">Hajj</a>
-    <a href="about.html">About</a>
-    <a href="flight.html">Flight</a>
-    <a href="home.html">Home</a>
+    <img src="logo1.png" alt="Logo">
+    <a href="index.html">HOME |</a>
+    <a href="flight.html">FLIGHT |</a>
+    <a href="hotel.html">HOTEL |</a>
+    <a href="visa.html">VISA |</a>
+    <a href="holidays.html">HOLIDAYS |</a>
+    <a href="about.html">ABOUT |</a>
+    <a href="umrah.html">UMRAH |</a>
+    <a href="hajj.html">HAJJ |</a>
+    <a href="contactus.html">24/7 Helpline: 011-4316-1039</a>
+    <a href="#" class="login-register"><i class="fas fa-user"></i> Login / Register</a>
 </nav>
-
-</script>

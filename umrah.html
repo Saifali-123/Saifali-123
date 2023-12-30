@@ -38,40 +38,133 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
-
-        footer {
-            background-color: green;
-            color: white;
-            padding: 10px;
-            text-align: center;
+        .image-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
         }
+
+        .image-slide {
+            flex: 1;
+            min-width: 100%;
+            height: 100vh; /* Make the image take up the full viewport height */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .image-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire container */
+        }
+
+        /* Additional styles for demonstration purposes */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+                
     </style>
 </head>
 <body>
     <script src="navbar.js" defer></script>
 
-
+    <div class="image-slider">
+        <div class="image-slide">
+            <img src="harmain sharifain.jpg" alt="Slide 1">
+        </div>
+        <div class="image-slide">
+            <img src="harmain sharif.jpg" alt="Slide 2">
+        </div>
+        <div class="image-slide">
+            <img src="MADINAH.jpg" alt="Slide 3">
+        </div>
+        <div class="image-slide">
+            <img src="haram e madinah.jpg" alt="Slide 3">
+        </div>
+        <div class="image-slide">
+            <img src="prophets-hajj-_-umrah.jpg" alt="Slide 3">
+        </div>
+    </div>
 
 <section>
-    <img class="umrah-img" src="umrah.jpeg" alt="Umrah Image">
+    
 
     <div class="info-box">
-        <h2>Umrah - A Spiritual Journey</h2>
+        <h2>Umrah Service by Get2Trip Pvt. Ltd</h2>
         <p>
-            Welcome to Get2Trip - Your Gateway to Sacred Journeys! Embark on a spiritual pilgrimage with Get2Trip, where your Umrah experience is our top priority. We understand the profound significance of this sacred journey, and our mission is to make it accessible, seamless, and spiritually fulfilling for you.
-        </p>
-        <h2>Why Choose Get2Trip for Your Umrah?</h2>
+            Welcome to a spiritually enriching journey with Get2Trip Pvt. Ltd's Umrah service. Our
+            commitment is to provide a seamless and unforgettable experience for pilgrims embarking
+            on the sacred pilgrimage of Umrah. With meticulous planning, experienced guides, and top-
+            notch services, we ensure that your spiritual journey is comfortable and spiritually uplifting.</p>
+        <h2>Our Umrah Service Highlights:</h2>
         <p>
-            Personalized Service: At Get2Trip, we believe in the power of a personal touch. Our team is dedicated to understanding your unique needs and preferences, tailoring your Umrah experience to make it truly yours. Transparent Planning: Clarity is key. We provide transparent information about our Umrah packages, ensuring you have a clear understanding of what to expect at every stage of your journey. No hidden surprises, just open communication. Trusted Guidance: Our knowledgeable guides are with you every step of the way, offering insights into the rituals and historical significance of each sacred site. Feel confident and supported throughout your Umrah journey. Comfortable Accommodations: Rest in comfort after a day of spiritual devotion. Get2Trip carefully selects accommodations that prioritize tranquility, allowing you to recharge and reflect on the spiritual essence of your pilgrimage. Community Spirit: Join a community of fellow pilgrims on a shared spiritual quest. Experience the camaraderie that comes from shared devotion and mutual support, fostering a sense of unity throughout your Umrah journey. Ease of Logistics: Say goodbye to logistical stress. Get2Trip handles the details – from transportation to documentation – ensuring a hassle-free experience so you can focus on the spiritual aspects of your journey. Your Umrah, Your Way: Whether you're a solo traveler, a family, or a group of friends, Get2Trip is here to make your Umrah experience memorable and meaningful. Trust us to guide you through this sacred journey with a human touch, making every step a testament to your faith. Welcome to Get2Trip, where your Umrah becomes a spiritual adventure of a lifetime.
-        </p>
+            <b>Expert Guidance:</b> Our experienced and knowledgeable guides are dedicated to ensuring that you have a smooth and fulfilling Umrah experience. They provide assistance at every step, from visa processing to the rituals of Umrah.      </p>
         <!-- Add more content about Umrah, its rituals, preparation tips, etc. -->
+        <p><b>Quality Accommodation:</b>
+            We prioritize your comfort and well-being by offering carefully selected accommodations
+            that align with your preferences and budget.</p>
+        <p><b>Transportation Services:</b>
+            Our transportation services are designed to make your travel hassle-free, ensuring timely
+            and comfortable journeys between sacred sites.</p>
+        <p><b>Spiritual Support:</b>
+            Immerse yourself in the spiritual ambiance with our support services, including religious
+            lectures and guidance to enhance your understanding of the rituals.</p>
+        <p><b>Customized Packages:</b>
+            We offer flexible Umrah packages tailored to meet your specific needs, whether you're
+            traveling solo, with family, or in a group.</p>
+        <h2>Frequently Asked Questions (FAQs):</h2>
+        <h3>Q1: What is Umrah, and how is it different from Hajj?</h3>
+        <p>A1: Umrah is a pilgrimage to Mecca, similar to Hajj but can be undertaken at any time of the
+            year. While Hajj is obligatory for all Muslims once in their lifetime, Umrah is a
+            recommended, non-mandatory pilgrimage.</p>
+        <h3>Q2: What services are included in the Umrah packages?</h3>
+        <p>A2: Our Umrah packages typically include visa processing, accommodation, transportation,
+            guided tours, and spiritual support. Specific inclusions may vary based on the package
+            selected.</p>
+        <h3>Q3: How do I book an Umrah package with Get2Trip Pvt. Ltd?<h3>
+        <p>A3: Booking is easy! Visit our website, browse through the Umrah packages, and follow the
+            simple booking process. Our customer support team is also available to assist you.</p>
+        <h3>Q4: Can I customize my Umrah package?</h3>
+        <p>A4: Yes, we understand that each pilgrim has unique preferences. You can customize your
+            Umrah package by selecting accommodation, transportation, and additional services
+            according to your needs.</p>
+        <h3>Q5: What documents are required for Umrah?</h3>
+        <p>A5: The necessary documents include a valid passport, visa application, and proof of
+            vaccination. Our team will guide you through the documentation process.
+            Embark on your spiritual journey with Get2Trip Pvt. Ltd and let us be your trusted partner in
+            facilitating a profound and memorable Umrah experience. May your pilgrimage be blessed
+            and spiritually uplifting.</p>
+        
     </div>
 
 </section>
+<script>
+    // JavaScript for image slider
+    let currentSlide = 0;
 
-<footer>
-    &copy; 2023 Get2Trip.com. All rights reserved.
-</footer>
+    function showSlide(index) {
+        const slider = document.querySelector('.image-slider');
+        const slides = document.querySelectorAll('.image-slide');
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+
+    // Automatically advance the slider
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000); // Change slide every 5 seconds
+</script>
+
+<script src="footer.js" defer></script>
 
 </body>
 </html>

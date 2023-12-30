@@ -4,17 +4,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+  
 }
 
 
-.container{
+.container {
   width: 85%;
+  max-width: 1000px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Set left and right margins to auto */
   background: #fff;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
 }
+
 .container .content{
   display: flex;
   align-items: center;

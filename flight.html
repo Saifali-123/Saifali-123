@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking - Your Website Name</title>
+    <title>Flight Booking - Get2Trip</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,21 +59,83 @@
         button:hover {
             background-color: #555;
         }
+        h1 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
 
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
+        .color1 {
+            color: #e44d26; /* Color for the first word */
+        }
+
+        .color2 {
+            color: #3498db; /* Color for the second word */
+        }
+
+        .color3 {
+            color: #2ecc71; /* Color for the third word */
+        }
+        .image-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image-slide {
+            flex: 1;
+            min-width: 100%;
+            height: 100vh; /* Make the image take up the full viewport height */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .image-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire container */
+        }
+        .info-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: black;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Get2Trip.com</h1>
+    <h1>
+        <span class="color1">Welcome</span> to
+        <span class="color2">GET2</span><span class="color3">TRIP</span><span class="color2"> PVT. LTD.</span> 
+    </h1>
 </header>
 <script src="navbar.js" defer></script>
+<div class="image-slider">
+    <div class="image-slide">
+        <img src="flight 1st.jpg" alt="Slide 1">
+    </div>
+    <div class="image-slide">
+        <img src="flight 2nd.jpg" alt="Slide 2">
+    </div>
+    <div class="image-slide">
+        <img src="flight 3rd.jpg" alt="Slide 3">
+    </div>
+    <div class="image-slide">
+        <img src="flight 4th.jpg" alt="Slide 3">
+    </div>
+    <div class="image-slide">
+        <img src="flight 5th.jpg" alt="Slide 3">
+    </div>
+</div>
 
 <section>
     <form action="#" method="post">
@@ -101,9 +163,58 @@
     </form>
 </section>
 
-<footer>
-    &copy; 2023 Get2Trip.com. All rights reserved.
-</footer>
+<div class="info-box">
+    <h2>Flight Service Description:</h2>
+    <p>
+        Welcome to Get2Trip Pvt. Ltd., your premier travel partner for hassle-free and memorable flights around the globe. We understand that every journey begins with a smooth and comfortable flight, and we are dedicated to providing you with the best travel experience possible.</p>
+    <h2>Our Services:</h2>
+    <p><b>Wide Range of Options:</b>Choose from a vast selection of airlines and flights to suit your preferences and budget.</p>
+    <p><b>Best Prices:</b> Enjoy competitive and transparent pricing on all our flight offerings.</p>
+    <p><b>User-Friendly Platform:</b> Our website is designed with simplicity in mind, ensuring a seamless booking experience.</p>
+    <p><b>24/7 Customer Support:</b> Our dedicated customer support team is available around the clock to assist you with any queries or concerns.</p>
+    <p><b>Secure Transactions:</b> Rest easy knowing that your payment transactions are secure and your data is protected.</p>
+    <p><b>Customized Packages:</b> Tailor your travel experience with our customizable flight packages to meet your unique needs.</p>
+    <h2>FAQs (Frequently Asked Questions):</h2>
+    <h3>Q1: How do I book a flight on Get2Trip Pvt. Ltd.?</h3>
+    <p>A: Booking a flight is easy! Simply visit our website, enter your travel details, choose from the available options, and complete the payment process.</p>
+    <h3>Q2: What payment methods do you accept?</h3>
+    <p>A: We accept a variety of payment methods, including credit/debit cards and other secure online payment options. Details can be found on our payment page.</p>
+    <h3>Q3: Can I make changes to my booking after confirmation?</h3>
+    <p>A: Yes, you can make changes to your booking within the stipulated time frame, subject to airline policies. Some changes may incur additional fees, so please review the terms and conditions.</p>
+    <h3>Q4: How can I contact customer support?<h3>
+    <p>A: Our customer support team is available 24/7. You can reach us through the "Contact Us" section on our website or by emailing support@get2trip.com.</p>
+    <h3>Q5: Are there any hidden fees in the pricing?</h3>
+    <p>A: No, we believe in transparency. The prices displayed on our website include all applicable taxes and fees. You won't encounter any hidden charges during the booking process.</p>
+    <h3>Q6: What happens if my flight is canceled or delayed?</h3>
+    <p>A: In the event of a cancellation or delay, our customer support team will assist you in accordance with the airline's policies. We'll do our best to provide alternative options or refunds based on the circumstances.</p>
+
+
+</div>
+
+<script src="footer.js" defer></script>
+<script>
+    // JavaScript for image slider
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slider = document.querySelector('.image-slider');
+        const slides = document.querySelectorAll('.image-slide');
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+
+    // Automatically advance the slider
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000); // Change slide every 5 seconds
+</script>
+
 
 </body>
 </html>

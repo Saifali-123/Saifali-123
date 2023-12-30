@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px; /* Add margin for spacing between icons and copyright */
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #333;
+            text-decoration: none;
+            font-size: 40px;
+        }
+
+        .payment-logos img {
+            width: 120px;
+            margin-left: 15px;
+        }
+
+        .IATA-logos img{
+
+            width: 120px;
+            margin-right: 15px;
+            float: right;
+
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/Get2trip1?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/get2trip.pvt.ltd?igsh=bW44NzMzam80YjJm" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/get2trip/" target="_blank"><i class="fab fa-linkedin linkedin-icon"></i></a>
+        <a href="https://www.youtube.com/@get2trip" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="IATA-logos">
+        <img src="IATA_logo.jpeg" alt="IATA">
+    </div>
+
+    <div class="payment-logos">
+        <img src="accept_image.png" alt="RuPay">
+        <img src="master_card.png" alt="Mastercard">
+        <img src="visa.png" alt="Visa">
+        <img src="american_express.png" alt="American Express">
+        <img src="rupay_image.png" alt="rupay_image">
+        <img src="upi.jpg" alt="phonepay_image">
+        <img src="gpay.jpg" alt="googlepay_image">
+        <!-- Add more payment logos as needed -->
+    </div>
+
+    <p>&copy; 2023 Get2Trip Pvt. Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

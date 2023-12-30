@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa - Get2Trip.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: black;
+        }
+
+        .umrah-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .image-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image-slide {
+            flex: 1;
+            min-width: 100%;
+            height: 100vh; /* Make the image take up the full viewport height */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .image-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire container */
+        }
+
+        /* Additional styles for demonstration purposes */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+                
+    </style>
+</head>
+<body>
+    <script src="navbar.js" defer></script>
+
+    <div class="image-slider">
+        <div class="image-slide">
+            <img src="visa.jpg" alt="Slide 1">
+        </div>
+        <div class="image-slide">
+            <img src="visa 2nd.jpg" alt="Slide 2">
+        </div>
+        <div class="image-slide">
+            <img src="visa 3rd.jpg" alt="Slide 3">
+        </div>
+        <div class="image-slide">
+            <img src="visa 4th.jpg" alt="Slide 3">
+        </div>
+        <div class="image-slide">
+            <img src="visa 5th.jpg" alt="Slide 3">
+        </div>
+    </div>
+
+<section>
+    
+
+    <div class="info-box">
+        <h2>Welcome to Get2Trip Visa Services</h2>
+        <h3>Welcome to Get2Trip Visa Services – Where Your Journey Begins with Ease!</h3>
+        <p>At Get2Trip Pvt. Ltd, we understand that the visa application process is a crucial step in turning your travel dreams into reality. Our Visa Services are designed to make this process efficient, reliable, and stress-free. Whether you're planning an international adventure, a business trip, or academic pursuits abroad, we are here to assist you every step of the way.</p>
+        <h2>Why Choose Get2Trip Visa Services?</h2>
+        
+        <p><b>Expert Guidance:</b> Our team of experienced visa experts is dedicated to providing you with the guidance you need. We stay abreast of the latest visa requirements and regulations to ensure accurate and timely assistance.</p>
+        <p><b>Personalized Solutions:</b> Recognizing that every traveler is unique, our services are tailored to meet your specific needs. Expect a personalized and efficient visa application process with Get2Trip.</p>
+        <p><b>Transparent Process:</b> We believe in transparency. Throughout the visa application process, you will be kept informed about the status of your application, expected timelines, and any additional steps required.</p>
+        <p><b>Customer Support:</b> Our friendly customer support team is ready to address any queries or concerns you may have. Feel free to reach out to us, and we'll be delighted to assist you.</p>
+        <h2>How to Get Started</h2>
+        <p>Getting started with Get2Trip Visa Services is straightforward. Simply contact us or visit our office, and our team will guide you through the initial steps. We are committed to making your visa application experience as straightforward as possible.</p>
+        <p>Thank you for choosing <b>Get2Trip Pvt. Ltd</b> for your visa needs. We look forward to being a part of your seamless travel journey.</p>
+        <p><b>Happy Travels!</b><p>
+
+
+        
+        
+    </div>
+
+</section>
+<script>
+    // JavaScript for image slider
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slider = document.querySelector('.image-slider');
+        const slides = document.querySelectorAll('.image-slide');
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+
+    // Automatically advance the slider
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000); // Change slide every 5 seconds
+</script>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

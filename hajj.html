@@ -52,35 +52,110 @@
             padding: 10px;
             text-align: center;
         }
+        .image-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image-slide {
+            flex: 1;
+            min-width: 100%;
+            height: 100vh; /* Make the image take up the full viewport height */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .image-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire container */
+        }
+
     </style>
 </head>
 <body>
 
 
 <script src="navbar.js" defer></script>
-
+<div class="image-slider">
+    <div class="image-slide">
+        <img src="MADINAH.jpg" alt="Slide 1">
+    </div>
+    <div class="image-slide">
+        <img src="harmain sharif.jpg" alt="Slide 2">
+    </div>
+    <div class="image-slide">
+        <img src="harmain sharifain.jpg" alt="Slide 3">
+    </div>
+    <div class="image-slide">
+        <img src="haram e madinah.jpg" alt="Slide 3">
+    </div>
+    <div class="image-slide">
+        <img src="prophets-hajj-_-umrah.jpg" alt="Slide 3">
+    </div>
+</div>
 
 
 <section>
-    <img class="hajj-img" src="hajj.jpg" alt="Hajj Image">
-
     <div class="info-box">
-        <h2>Welcome to Hajj Bliss with Get2Trip - Your Guiding Light on the Sacred Journey!</h2>
+        <h2>Welcome to Hajj Bliss with Get2Trip.Pvt .Ltd - Your Guiding Light on the Sacred Journey!</h2>
         <p>
-            Embark on a spiritual odyssey with Get2Trip, where we are dedicated to making your Hajj experience not just a pilgrimage but a profoundly enriching and accessible journey. As you step into the sacred footsteps of millions, let us be your trusted companions in this transformative pilgrimage.
+            Embark on a spiritual odyssey with Get2Trip PVT. Ltd., where we are dedicated to making your Hajj experience not just a pilgrimage but a profoundly enriching and accessible journey. As you step into the sacred footsteps of millions, let us be your trusted companions in this transformative pilgrimage.
         </p>
-        <h2>Why Choose Get2Trip for Your Hajj?</h2>
+        <h2>Why Choose Get2Trip Pvt. Ltd. for Hajj?</h2>
         <p>
-            Guidance and Wisdom: Your journey is guided by experienced mentors who impart wisdom about the rituals and historical significance of Hajj. Let their insights enhance your understanding and deepen your connection with this sacred pilgrimage. Comfortable Accommodations: After a day of spiritual devotion, find solace in carefully selected accommodations. Get2Trip ensures your lodgings are serene, providing a peaceful space for reflection and rejuvenation amidst the demands of Hajj. Transparent Planning: At Get2Trip, we prioritize clear communication. Our transparent approach ensures you are well-informed at every stage of your Hajj journey. We want you to embark on this sacred adventure with confidence and clarity. Community Bond: Join a community of fellow pilgrims on a shared spiritual quest. Experience the camaraderie that stems from shared devotion, creating an environment of unity and support throughout your Hajj journey. Logistical Ease: Say farewell to logistical concerns. Get2Trip meticulously handles the details - from transportation to documentation - so you can focus on the spiritual essence of your Hajj pilgrimage without distraction. Your Hajj, Your Spiritual Ascent: At Get2Trip, we understand that your Hajj is a deeply personal journey. Whether you are traveling alone, with family, or in a group, our mission is to ensure your Hajj experience is both seamless and profoundly meaningful. Welcome to Get2Trip - your guiding light on the sacred journey of Hajj. Let us accompany you as you embark on this transformative pilgrimage, making every step a testament to your faith and devotion.
+            <b>Expertise and Experience:</b> With years of experience in organizing religious pilgrimages, we bring
+            unparalleled expertise to ensure a seamless and spiritually enriching Hajj experience for our clients.
         </p>
+        <p><b>Personalized Packages: </b>Recognizing that each pilgrim has unique preferences and requirements,
+            we offer a range of customizable Hajj packages. From accommodation choices to transportation
+            arrangements, our packages cater to diverse needs.</p>
+        <p><b>Accommodation at Proximity:</b> We prioritize your convenience by selecting accommodations in
+            close proximity to the holy sites in Mecca and Medina. This ensures that you can focus on your
+            spiritual journey without worrying about logistical challenges.</p>
+        <p><b>Experienced Guides:</b> Our experienced and knowledgeable guides are committed to providing
+            insightful information and guidance throughout your pilgrimage. They are there to assist you in
+            navigating the rituals and historical significance of the sacred sites.</p>
+        <p><b>Comfortable Transportation: </b>Travel in comfort with our well-maintained and air-conditioned
+            transportation services. We understand the significance of a hassle-free journey, and our vehicles
+            are equipped to ensure a smooth pilgrimage experience.</p>
+        <p><b>Spiritual Guidance:</b> Beyond logistics, our commitment extends to providing spiritual guidance. We
+            organize sessions with knowledgeable scholars to enhance your understanding of the rituals and
+            historical context of Hajj.</p>
+        <p><b>24/7 Support:</b> Our dedicated support team is available round-the-clock to address any concerns or
+            queries you may have before, during, or after your pilgrimage.</p>
+        <h2>Book Your Hajj Journey with Get2Trip Pvt. Ltd.</h2>
+        <p>Embark on your spiritual journey with confidence, knowing that Get2Trip Pvt. Ltd. is devoted to
+            making your Hajj experience memorable, meaningful, and stress-free. Contact us today to explore
+            our Hajj packages and start your sacred pilgrimage with the assurance of a trusted travel partner.</p>
         <!-- Add more content about the significance of Hajj, preparation tips, etc. -->
     </div>
 
 </section>
+<script>
+    // JavaScript for image slider
+    let currentSlide = 0;
 
-<footer>
-    &copy; 2023 Get2Trip.com. All rights reserved.
-</footer>
+    function showSlide(index) {
+        const slider = document.querySelector('.image-slider');
+        const slides = document.querySelectorAll('.image-slide');
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+
+    // Automatically advance the slider
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000); // Change slide every 5 seconds
+</script>
+
+<script src="footer.js" defer></script>
 
 </body>
 </html>

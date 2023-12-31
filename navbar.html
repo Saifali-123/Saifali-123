@@ -59,6 +59,20 @@
             margin: 0 5px;
         }
 
+        .helpline-section {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            margin-left: 60px;
+        }
+
+        .helpline-number {
+            margin-right: 5px;
+            color: #333;
+            cursor: pointer;
+            font-weight: 1000;
+        }
+
         .login-register {
             background-color: #333;
             color: white;
@@ -95,7 +109,7 @@
             }
 
             nav ul.show {
-                display: block;
+                display: flex;
             }
 
             nav ul li {
@@ -103,43 +117,56 @@
                 padding: 15px 0;
             }
 
+            .helpline-section {
+                margin-left: 15px 0;
+            }
+
             .login-register {
                 margin: 15px 0;
             }
         }
-        header{
+        
+        header {
             text-align: center;
         }
     </style>
 </head>
 
 <body>
-<header>
-<nav>
-    <img src="logo1.png" alt="Logo">
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <ul>
-        <li><a href="index.html">HOME |</a></li>
-        <li><a href="flight.html">FLIGHT |</a></li>
-        <li><a href="hotel.html">HOTEL |</a></li>
-        <li><a href="visa.html">VISA |</a></li>
-        <li><a href="holidays.html">HOLIDAYS |</a></li>
-        <li><a href="about.html">ABOUT |</a></li>
-        <li><a href="umrah.html">UMRAH |</a></li>
-        <li><a href="hajj.html">HAJJ |</a></li>
-        <li><a href="contactus.html">24/7 Helpline: 011-4316-1039</a></li>
-    </ul>
-    
-    <a href="#" class="login-register"><i class="fas fa-user"></i> Login / Register</a>
-</nav>
-</header>
+    <header>
+        <nav>
+            <img src="logo1.png" alt="Logo">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="flight.html">FLIGHT</a></li>
+                <li><a href="hotel.html">HOTEL</a></li>
+                <li><a href="visa.html">VISA</a></li>
+                <li><a href="holidays.html">HOLIDAYS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="umrah.html">UMRAH</a></li>
+                <li><a href="hajj.html">HAJJ</a></li>
+            </ul>
+            <div class="helpline-section">
+                <span class="helpline-number" onclick="callHelpline()"><a href="contactus.html">24/7 Helpline: </a></span>
+                <a class="helpline-number" href="tel:+01143161039">011-43161039</a>
+            </div>
+            <a href="#" class="login-register"><i class="fas fa-user"></i> Login / Register</a>
+        </nav>
+    </header>
 
-<script>
-    function toggleMenu() {
-        const menu = document.querySelector('nav ul');
-        menu.classList.toggle('show');
-    }
-</script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
+        }
+
+        function callHelpline() {
+            // You can add functionality here to initiate a call
+            // For example, redirect to a "tel:" link
+            window.location.href = 'tel:+01143161039';
+        }
+    </script>
 
 </body>
 

@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hajj - Get2Trip.com</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style2.css" />
+    <title>Hotal - Get2Trip.com</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -72,23 +77,63 @@
 
 
 <script src="navbar.js" defer></script>
-<div class="image-slider">
-    <div class="image-slide">
-        <img src="hotel-1.jpg" alt="Slide 1">
+
+
+<div class="container">
+
+    <div class="mySlides">
+        <img src="hotel-1.jpg" style="width:100% ; height:80vh" >
     </div>
-    <div class="image-slide">
-        <img src="hotel 2nd.jpg" alt="Slide 2">
+  
+    <div class="mySlides">
+        <img src="hotel 2nd.jpg" style="width:100% ; height:80vh">
     </div>
-    <div class="image-slide">
-        <img src="hotrl balcony.jpg" alt="Slide 3">
+  
+    <div class="mySlides">
+        <img src="hotrl balcony.jpg" style="width:100% ; height:80vh">
     </div>
-    <div class="image-slide">
-        <img src="hotel lobby.jpg" alt="Slide 3">
+  
+    <div class="mySlides">
+        <img src="hotel lobby.jpg" style="width:100% ; height:80vh">
     </div>
-    <div class="image-slide">
-        <img src="hotel final.jpg" alt="Slide 3">
+  
+    <div class="mySlides">
+        <img src="hotel final.jpg" style="width:100% ; height:80vh">
     </div>
-</div>
+  
+  
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(1)" >
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(2)" >
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(3)" >
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(4)" >
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(5)" >
+      </div>
+    </div> 
+
+  </div>
+
+<script src="index.js"></script>
+
+
+
+
 
 
 <section>

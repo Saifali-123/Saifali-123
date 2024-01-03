@@ -1,220 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking - Get2Trip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
         }
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
+        nav {
+            background-color: white;
+            overflow: hidden;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+        }
+
+        nav img {
+            height: 60px;
+            margin-top: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            padding: 15px 3px;
+            margin: 0 5px;
+            font-weight: lighter;
             text-align: center;
         }
-        section {
-            padding: 20px;
-            text-align: center;
+
+        nav a:hover {
+            background-color: #dddddda9;
+            color: black;
         }
 
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: green;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
+        .menu-icon {
+            display: none;
+            color: black;
+            font-size: 1.5em;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #555;
-        }
-        h1 {
-            font-size: 2em;
-            margin: 20px 0;
-        }
-
-        .color1 {
-            color: #e44d26; /* Color for the first word */
-        }
-
-        .color2 {
-            color: #3498db; /* Color for the second word */
-        }
-
-        .color3 {
-            color: #2ecc71; /* Color for the third word */
-        }
-        .image-slider {
+        nav ul {
+            list-style: none;
             display: flex;
-            transition: transform 0.5s ease-in-out;
         }
 
-        .image-slide {
-            flex: 1;
-            min-width: 100%;
-            height: 100vh; /* Make the image take up the full viewport height */
-            box-sizing: border-box;
-            overflow: hidden;
+        nav ul li {
+            margin: 0 5px;
         }
 
-        .image-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensure the image covers the entire container */
+        .login-register {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: auto;
         }
-        .info-box {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        h2 {
+
+        .helpline {
+            margin-left: 10px;
+            font-weight: bold;
             color: #333;
         }
 
-        p {
-            line-height: 1.6;
-            color: black;
+        @media only screen and (max-width: 768px) {
+            nav {
+                flex-direction: left;
+                align-items: flex-start;
+            }
+
+            nav img {
+                margin-left: 10px;
+                margin-right: auto;
+            }
+
+            nav a {
+                display: block;
+                width: 100%;
+                text-align: left;
+                margin: 0;
+            }
+
+            .menu-icon {
+                display: inline-block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                width: 100%;
+                background-color: white;
+                text-align: center;
+                top: 60px;
+                flex-direction: column;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                display: block;
+                padding: 15px 0;
+                width: 100%;
+            }
+
+            .login-register {
+                margin: 5px 0;
+            }
+        }
+
+        header {
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <nav>
+            <img src="logo1.png" alt="Logo">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul>
+                <li><a href="index.html">HOME </a></li>
+                <li><a href="flight.html">FLIGHT </a></li>
+                <li><a href="hotel.html">HOTEL </a></li>
+                <li><a href="visa.html">VISA </a></li>
+                <li><a href="holidays.html">HOLIDAYS </a></li>
+                <li><a href="about.html">ABOUT </a></li>
+                <li><a href="umrah.html">UMRAH </a></li>
+                <li><a href="hajj.html">HAJJ </a></li>
+                
+            </ul>
+            <a href="tel:your-helpline-number" class="helpline">24/7 Helpline: your-helpline-number</a>
+            <a href="#" class="login-register"><i class="fas fa-user"></i> Login / Register</a>
+        </nav>
+    </header>
 
-<header>
-    <h1>
-        <span class="color1">Welcome</span> to
-        <span class="color2">GET2</span><span class="color3">TRIP</span><span class="color2"> PVT. LTD.</span> 
-    </h1>
-</header>
-<script src="navbar.js" defer></script>
-<div class="image-slider">
-    <div class="image-slide">
-        <img src="flight 1st.jpg" alt="Slide 1">
-    </div>
-    <div class="image-slide">
-        <img src="flight 2nd.jpg" alt="Slide 2">
-    </div>
-    <div class="image-slide">
-        <img src="flight 3rd.jpg" alt="Slide 3">
-    </div>
-    <div class="image-slide">
-        <img src="flight 4th.jpg" alt="Slide 3">
-    </div>
-    <div class="image-slide">
-        <img src="flight 5th.jpg" alt="Slide 3">
-    </div>
-</div>
-
-<section>
-    <form action="#" method="post">
-        <label for="from">From:</label>
-        <input type="text" id="from" name="from" required>
-
-        <label for="to">To:</label>
-        <input type="text" id="to" name="to" required>
-
-        <label for="departureDate">Departure Date:</label>
-        <input type="date" id="departureDate" name="departureDate" required>
-
-        <label for="returnDate">Return Date:</label>
-        <input type="date" id="returnDate" name="returnDate" required>
-
-        <label for="travelers">Number of Travelers:</label>
-        <select id="travelers" name="travelers" required>
-            <option value="1">1 Traveler</option>
-            <option value="2">2 Travelers</option>
-            <option value="3">3 Travelers</option>
-            <!-- Add more options as needed -->
-        </select>
-
-        <button type="submit">Submit</button>
-    </form>
-</section>
-
-<div class="info-box">
-    <h2>Flight Service Description:</h2>
-    <p>
-        Welcome to Get2Trip Pvt. Ltd., your premier travel partner for hassle-free and memorable flights around the globe. We understand that every journey begins with a smooth and comfortable flight, and we are dedicated to providing you with the best travel experience possible.</p>
-    <h2>Our Services:</h2>
-    <p><b>Wide Range of Options:</b>Choose from a vast selection of airlines and flights to suit your preferences and budget.</p>
-    <p><b>Best Prices:</b> Enjoy competitive and transparent pricing on all our flight offerings.</p>
-    <p><b>User-Friendly Platform:</b> Our website is designed with simplicity in mind, ensuring a seamless booking experience.</p>
-    <p><b>24/7 Customer Support:</b> Our dedicated customer support team is available around the clock to assist you with any queries or concerns.</p>
-    <p><b>Secure Transactions:</b> Rest easy knowing that your payment transactions are secure and your data is protected.</p>
-    <p><b>Customized Packages:</b> Tailor your travel experience with our customizable flight packages to meet your unique needs.</p>
-    <h2>FAQs (Frequently Asked Questions):</h2>
-    <h3>Q1: How do I book a flight on Get2Trip Pvt. Ltd.?</h3>
-    <p>A: Booking a flight is easy! Simply visit our website, enter your travel details, choose from the available options, and complete the payment process.</p>
-    <h3>Q2: What payment methods do you accept?</h3>
-    <p>A: We accept a variety of payment methods, including credit/debit cards and other secure online payment options. Details can be found on our payment page.</p>
-    <h3>Q3: Can I make changes to my booking after confirmation?</h3>
-    <p>A: Yes, you can make changes to your booking within the stipulated time frame, subject to airline policies. Some changes may incur additional fees, so please review the terms and conditions.</p>
-    <h3>Q4: How can I contact customer support?<h3>
-    <p>A: Our customer support team is available 24/7. You can reach us through the "Contact Us" section on our website or by emailing support@get2trip.com.</p>
-    <h3>Q5: Are there any hidden fees in the pricing?</h3>
-    <p>A: No, we believe in transparency. The prices displayed on our website include all applicable taxes and fees. You won't encounter any hidden charges during the booking process.</p>
-    <h3>Q6: What happens if my flight is canceled or delayed?</h3>
-    <p>A: In the event of a cancellation or delay, our customer support team will assist you in accordance with the airline's policies. We'll do our best to provide alternative options or refunds based on the circumstances.</p>
-
-
-</div>
-
-<script src="footer.js" defer></script>
-<script>
-    // JavaScript for image slider
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        const slider = document.querySelector('.image-slider');
-        const slides = document.querySelectorAll('.image-slide');
-        if (index >= slides.length) {
-            currentSlide = 0;
-        } else if (index < 0) {
-            currentSlide = slides.length - 1;
-        } else {
-            currentSlide = index;
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
         }
-        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
-    }
-
-    // Automatically advance the slider
-    setInterval(() => {
-        showSlide(currentSlide + 1);
-    }, 5000); // Change slide every 5 seconds
-</script>
-
-
+    </script>
 </body>
+
 </html>
